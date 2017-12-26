@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parsers>
+	<parser name="Activities" source="org.wfmc.xpdl.Activities" tarjet ="org.wfmc.xpdl2.Activities">
+			<field name="Activity" type="list"></field>
+	</parser>
+	<parser name="Activity" source="org.wfmc.xpdl.Activity" tarjet ="org.wfmc.xpdl2.Activity">
+			<field name="BlockActivity" type="object"></field>
+			<field name="Deadline" type="list"></field>
+			<field name="Description" type="value"></field>
+			<field name="Documentation" type="object"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="FinishMode" type="object"></field>
+			<field name="Icon" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="Implementation" type="object"></field>
+			<field name="Limit" type="object"></field>
+			<field name="Name" type="value"></field>
+			<field name="Performer" type="valueToObject"></field>
+			<field name="Priority" type="valueToObject"></field>
+			<field name="Route" type="object"></field>
+			<field name="SimulationInformation" type="object"></field>
+			<field name="StartMode" type="object"></field>
+			<field name="TransitionRestrictions" type="object"></field>
+	</parser>	
+	<parser name="ActivitySet" source="org.wfmc.xpdl.ActivitySet" tarjet ="org.wfmc.xpdl2.ActivitySet">
+			<field name="Activities" type="list"></field>
+			<field name="Id" type="value"></field>
+			<field name="Description" type="object"></field>
+	</parser>
+	<parser name="ActivitySets" source="org.wfmc.xpdl.ActivitySets" tarjet ="org.wfmc.xpdl2.ActivitySets">
+			<field name="ActivitySet" type="list"></field>
+	</parser>
+	<parser name="ActualParameters" source="org.wfmc.xpdl.ActualParameters" tarjet ="org.wfmc.xpdl2.ActualParameters">
+			<field name="ActualParameter" type="list"></field>
+	</parser>	
+	<parser name="ActualParameter" source="java.lang.String" tarjet ="org.wfmc.xpdl2.ExpressionType">
+			<field name="ScriptGrammar" type="value"></field>
+	</parser>
+	<parser name="Application" source="org.wfmc.xpdl.Application" tarjet ="org.wfmc.xpdl2.Application">
+			<field name="Description" type="valueToObject"></field>
+			<field name="FormalParameters" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="Name" type="value"></field>
+	</parser>	
+	<parser name="Applications" source="org.wfmc.xpdl.Applications" tarjet ="org.wfmc.xpdl2.Applications">
+			<field name="Application" type="list"></field>
+	</parser>	
+	<parser name="ArrayType" source="org.wfmc.xpdl.ArrayType" tarjet ="org.wfmc.xpdl2.ArrayType">
+			<field name="BasicType" type="object"></field>
+			<field name="DeclaredType" type="object"></field>
+			<field name="SchemaType" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="RecordType" type="object"></field>
+			<field name="UnionType" type="object"></field>			
+			<field name="EnumerationType" type="object"></field>			
+			<field name="ArrayType" type="object"></field>
+			<field name="ListType" type="object"></field>
+			<field name="LowerIndex" type="value"></field>
+			<field name="UpperIndex" type="value"></field>
+	</parser>
+	<parser name="BasicType" source="org.wfmc.xpdl.BasicType" tarjet ="org.wfmc.xpdl2.BasicType">
+			<field name="Type" type="value"></field>
+	</parser>
+	<parser name="BlockActivity" source="org.wfmc.xpdl.BlockActivity" tarjet ="org.wfmc.xpdl2.BlockActivity">
+			<field name="BlockId" type="valueToValue" tarjet="StartActivityId"></field>
+	</parser>
+	<parser name="Condition" source="org.wfmc.xpdl.Condition" tarjet ="org.wfmc.xpdl2.Condition">
+			<field name="Content" type="value"></field>
+			<field name="Type" type="value"></field>
+	</parser>	
+	<parser name="Content" source="java.lang.Object" tarjet ="java.lang.Object">
+	</parser>
+	<parser name="ConformanceClass" source="org.wfmc.xpdl.ConformanceClass" tarjet ="org.wfmc.xpdl2.ConformanceClass">
+			<field name="GraphConformance" type="value"></field>
+	</parser>	
+	<parser name="DataField" source="org.wfmc.xpdl.DataField" tarjet ="org.wfmc.xpdl2.DataField">
+			<field name="DataType" type="object"></field>
+			<field name="InitialValue" type="valueToObject"></field>
+			<field name="Length" type="valueToObject"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="Id" type="value"></field>			
+			<field name="Name" type="value"></field>			
+			<field name="IsArray" type="value"></field>
+	</parser>		
+	<parser name="DataFields" source="org.wfmc.xpdl.DataFields" tarjet ="org.wfmc.xpdl2.DataFields">
+			<field name="DataField" type="list"></field>
+	</parser>
+	<parser name="DataType" source="org.wfmc.xpdl.DataType" tarjet ="org.wfmc.xpdl2.DataType">
+			<field name="BasicType" type="object"></field>
+			<field name="DeclaredType" type="object"></field>
+			<field name="SchemaType" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="RecordType" type="object"></field>
+			<field name="UnionType" type="object"></field>			
+			<field name="EnumerationType" type="object"></field>			
+			<field name="ArrayType" type="object"></field>
+			<field name="ListType" type="object"></field>
+	</parser>
+	<parser name="Deadline" source="org.wfmc.xpdl.Deadline" tarjet ="org.wfmc.xpdl2.Deadline">
+			<field name="DeadlineCondition" type="valueToObject" tarjet="ScriptGrammar"></field>
+			<field name="ExceptionName" type="valueToObject"></field>
+			<field name="Execution" type="value"></field>
+	</parser>	
+	<parser name="DeclaredType" source="org.wfmc.xpdl.DeclaredType" tarjet ="org.wfmc.xpdl2.DeclaredType">
+			<field name="Id" type="value"></field>
+	</parser>	
+	<parser name="EnumerationType" source="org.wfmc.xpdl.EnumerationType" tarjet ="org.wfmc.xpdl2.EnumerationType">
+			<field name="EnumerationValue" type="list"></field>
+	</parser>	
+	<parser name="EnumerationValue" source="org.wfmc.xpdl.EnumerationValue" tarjet ="org.wfmc.xpdl2.EnumerationValue">
+			<field name="Name" type="value"></field>
+	</parser>	
+	<parser name="ExtendedAttribute" source="org.wfmc.xpdl.ExtendedAttribute" tarjet ="org.wfmc.xpdl2.ExtendedAttribute">
+			<field name="Content" type="list"></field>
+			<field name="Name" type="value"></field>
+			<field name="Value" type="value"></field>
+	</parser>	
+	<parser name="ExtendedAttributes" source="org.wfmc.xpdl.ExtendedAttributes" tarjet ="org.wfmc.xpdl2.ExtendedAttributes">
+			<field name="ExtendedAttribute" type="list"></field>
+	</parser>	
+	<parser name="ExternalPackage" source="org.wfmc.xpdl.ExternalPackage" tarjet ="org.wfmc.xpdl2.ExternalPackage">
+			<field name="ExtendedAttributes" type="list"></field>
+			<field name="Href" type="value"></field>
+	</parser>
+	<parser name="ExternalPackages" source="org.wfmc.xpdl.ExternalPackages" tarjet ="org.wfmc.xpdl2.ExternalPackages">
+			<field name="ExternalPackage" type="list"></field>
+	</parser>	
+	<parser name="ExternalReference" source="org.wfmc.xpdl.ExternalReference" tarjet ="org.wfmc.xpdl2.ExternalReference">
+			<field name="Location" type="value"></field>
+			<field name="Namespace" type="value"></field>
+			<field name="Xref" type="value"></field>
+	</parser>	
+	<parser name="FormalParameter" source="org.wfmc.xpdl.FormalParameter" tarjet ="org.wfmc.xpdl2.FormalParameter">
+			<field name="DataType" type="object"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="Id" type="value"></field>
+			<field name="Index" type="valueToObject" tarjet="Length"></field>
+			<field name="Mode" type="value"></field>
+	</parser>	
+	<parser name="FormalParameters" source="org.wfmc.xpdl.FormalParameters" tarjet ="org.wfmc.xpdl2.FormalParameters">
+			<field name="FormalParameter" type="list"></field>
+	</parser>	
+	<parser name="Implementation" source="org.wfmc.xpdl.Implementation" tarjet ="org.wfmc.xpdl2.Implementation">
+			<field name="No" type="object"></field>
+			<field name="SubFlow" type="object"></field>
+	</parser>	
+	<parser name="Join" source="org.wfmc.xpdl.Join" tarjet ="org.wfmc.xpdl2.Join">
+			<field name="Type" type="value"></field>
+	</parser>	
+	<parser name="ListType" source="org.wfmc.xpdl.ListType" tarjet ="org.wfmc.xpdl2.ListType">
+			<field name="BasicType" type="object"></field>
+			<field name="DeclaredType" type="object"></field>
+			<field name="SchemaType" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="RecordType" type="object"></field>
+			<field name="UnionType" type="object"></field>			
+			<field name="EnumerationType" type="object"></field>			
+			<field name="ArrayType" type="object"></field>	
+			<field name="ListType" type="object"></field>		
+	</parser>	
+	<parser name="Member" source="org.wfmc.xpdl.Member" tarjet ="org.wfmc.xpdl2.Member">
+			<field name="BasicType" type="object"></field>
+			<field name="DeclaredType" type="object"></field>
+			<field name="SchemaType" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="RecordType" type="object"></field>
+			<field name="UnionType" type="object"></field>			
+			<field name="EnumerationType" type="object"></field>			
+			<field name="ArrayType" type="object"></field>	
+			<field name="ListType" type="object"></field>		
+	</parser>	
+	<parser name="No" source="org.wfmc.xpdl.No" tarjet ="org.wfmc.xpdl2.No">
+	</parser>
+	<parser name="Package" source="org.wfmc.xpdl.Package" tarjet ="org.wfmc.xpdl2.PackageType">
+			<field name="PackageHeader" type="object"></field>
+			<field name="RedefinableHeader" type="object"></field>
+			<field name="ConformanceClass" type="object"></field>
+			<field name="Script" type="object"></field>
+			<field name="ExternalPackages" type="object"></field>
+			<field name="TypeDeclarations" type="object"></field>			
+			<field name="Participants" type="object"></field>			
+			<field name="Applications" type="object"></field>	
+			<field name="DataFields" type="object"></field>		
+			<field name="WorkflowProcesses" type="object"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="Name" type="value"></field>
+	</parser>
+	<parser name="PackageHeader" source="org.wfmc.xpdl.PackageHeader" tarjet ="org.wfmc.xpdl2.PackageHeader">
+			<field name="XPDLVersion" type="valueToObject"></field>
+			<field name="Vendor" type="valueToObject"></field>
+			<field name="Created" type="valueToObject"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="Documentation" type="valueToObject"></field>
+			<field name="PriorityUnit" type="valueToObject"></field>			
+			<field name="CostUnit" type="valueToObject"></field>			
+	</parser>	
+	<parser name="Participant" source="org.wfmc.xpdl.Participant" tarjet ="org.wfmc.xpdl2.Participant">
+			<field name="ParticipantType" type="object"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="Name" type="value"></field>			
+	</parser>	
+	<parser name="Participants" source="org.wfmc.xpdl.Participants" tarjet ="org.wfmc.xpdl2.Participants">
+			<field name="Participant" type="list"></field>
+	</parser>
+	<parser name="ParticipantType" source="org.wfmc.xpdl.ParticipantType" tarjet ="org.wfmc.xpdl2.ParticipantType">
+			<field name="Type" type="value"></field>
+	</parser>			
+	<parser name="ProcessHeader" source="org.wfmc.xpdl.ProcessHeader" tarjet ="org.wfmc.xpdl2.ProcessHeader">
+			<field name="Created" type="valueToObject"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="Priority" type="valueToObject"></field>
+			<field name="Limit" type="valueToObject"></field>
+			<field name="ValidFrom" type="valueToObject"></field>						
+			<field name="ValidTo" type="valueToObject"></field>			
+			<field name="TimeEstimation" type="valueToObject"></field>			
+			<field name="DurationUnit" type="valueToObject"></field>			
+	</parser>	
+	<parser name="RecordType" source="org.wfmc.xpdl.RecordType" tarjet ="org.wfmc.xpdl2.RecordType">
+			<field name="Member" type="list"></field>
+	</parser>	
+	<parser name="RedefinableHeader" source="org.wfmc.xpdl.RedefinableHeader" tarjet ="org.wfmc.xpdl2.RedefinableHeader">
+			<field name="Author" type="valueToObject"></field>
+			<field name="Version" type="valueToObject"></field>
+			<field name="Codepage" type="valueToObject"></field>
+			<field name="Countrykey" type="valueToObject"></field>
+			<field name="Responsibles" type="valueToObject"></field>						
+			<field name="PublicationStatus" type="value"></field>			
+	</parser>	
+	<parser name="Responsibles" source="org.wfmc.xpdl.Responsibles" tarjet ="org.wfmc.xpdl2.Responsibles">
+			<field name="Responsible" type="list"></field>
+	</parser>	
+	<parser name="Responsible" source="java.lang.String" tarjet ="org.wfmc.xpdl2.Responsible">
+			<field name="Value" type="value"></field>
+	</parser>	
+	<parser name="Route" source="org.wfmc.xpdl.Route" tarjet ="org.wfmc.xpdl2.Route">
+	</parser>					
+	<parser name="SchemaType" source="org.wfmc.xpdl.SchemaType" tarjet ="org.wfmc.xpdl2.SchemaType">
+			<field name="Any" type="value"></field>
+	</parser>	
+	<parser name="Script" source="org.wfmc.xpdl.Script" tarjet ="org.wfmc.xpdl2.Script">
+			<field name="Type" type="value"></field>
+			<field name="Version" type="value"></field>
+			<field name="Grammar" type="value"></field>
+	</parser>	
+	<parser name="SimulationInformation" source="org.wfmc.xpdl.SimulationInformation" tarjet ="org.wfmc.xpdl2.SimulationInformation">
+			<field name="Cost" type="valueToObject"></field>
+			<field name="TimeEstimation" type="valueToObject"></field>
+			<field name="Instantiation" type="value"></field>
+	</parser>
+	<parser name="Split" source="org.wfmc.xpdl.Split" tarjet ="org.wfmc.xpdl2.Split">
+			<field name="TransitionRefs" type="object"></field>
+			<field name="Type" type="value"></field>
+	</parser>				
+	<parser name="SubFlow" source="org.wfmc.xpdl.SubFlow" tarjet ="org.wfmc.xpdl2.SubFlow">
+			<field name="ActualParameters" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="Execution" type="value"></field>
+	</parser>	
+	<parser name="TimeEstimation" source="org.wfmc.xpdl.TimeEstimation" tarjet ="org.wfmc.xpdl2.TimeEstimation">
+			<field name="WaitingTime" type="valueToObject"></field>
+			<field name="WorkingTime" type="valueToObject"></field>
+			<field name="Duration" type="valueToObject"></field>
+	</parser>		
+	<parser name="Transition" source="org.wfmc.xpdl.Transition" tarjet ="org.wfmc.xpdl2.Transition">
+			<field name="Condition" type="valueToObject"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="ExtendedAttributes" type="object"></field>
+			<field name="Id" type="value"></field>
+			<field name="From" type="value"></field>
+			<field name="Name" type="value"></field>
+	</parser>	
+	<parser name="TransitionRef" source="org.wfmc.xpdl.TransitionRef" tarjet ="org.wfmc.xpdl2.TransitionRef">
+			<field name="Id" type="value"></field>
+	</parser>		
+	<parser name="TransitionRefs" source="org.wfmc.xpdl.TransitionRefs" tarjet ="org.wfmc.xpdl2.TransitionRefs">
+			<field name="TransitionRef" type="list"></field>
+	</parser>		
+	<parser name="TransitionRestriction" source="org.wfmc.xpdl.TransitionRestriction" tarjet ="org.wfmc.xpdl2.TransitionRestriction">
+			<field name="Join" type="object"></field>
+			<field name="Split" type="object"></field>
+	</parser>		
+	<parser name="TransitionRestrictions" source="org.wfmc.xpdl.TransitionRestrictions" tarjet ="org.wfmc.xpdl2.TransitionRestrictions">
+			<field name="TransitionRestriction" type="list"></field>
+	</parser>		
+	<parser name="Transitions" source="org.wfmc.xpdl.Transitions" tarjet ="org.wfmc.xpdl2.Transitions">
+			<field name="Transition" type="list"></field>
+	</parser>	
+	<parser name="TypeDeclaration" source="org.wfmc.xpdl.TypeDeclaration" tarjet ="org.wfmc.xpdl2.TypeDeclaration">
+			<field name="BasicType" type="object"></field>
+			<field name="DeclaredType" type="object"></field>
+			<field name="SchemaType" type="object"></field>
+			<field name="ExternalReference" type="object"></field>
+			<field name="RecordType" type="object"></field>
+			<field name="UnionType" type="object"></field>			
+			<field name="EnumerationType" type="object"></field>			
+			<field name="ArrayType" type="object"></field>	
+			<field name="ListType" type="object"></field>
+			<field name="Description" type="valueToObject"></field>
+			<field name="ExtendedAttributes" type="object"></field>	
+			<field name="Id" type="value"></field>	
+	</parser>	
+	<parser name="TypeDeclarations" source="org.wfmc.xpdl.TypeDeclarations" tarjet ="org.wfmc.xpdl2.TypeDeclarations">
+			<field name="TypeDeclaration" type="list"></field>
+	</parser>		
+	<parser name="UnionType" source="org.wfmc.xpdl.UnionType" tarjet ="org.wfmc.xpdl2.UnionType">
+			<field name="Member" type="list"></field>
+	</parser>		
+	<parser name="WorkflowProcess" source="org.wfmc.xpdl.WorkflowProcess" tarjet ="org.wfmc.xpdl2.ProcessType">
+			<field name="ProcessHeader" type="object"></field>
+			<field name="RedefinableHeader" type="object"></field>
+			<field name="FormalParameters" type="object"></field>
+			<field name="DataFields" type="object"></field>
+			<field name="Participants" type="object"></field>
+			<field name="Applications" type="object"></field>			
+			<field name="ActivitySets" type="object"></field>			
+			<field name="Activities" type="object"></field>	
+			<field name="Transitions" type="object"></field>
+			<field name="ExtendedAttributes" type="object"></field>	
+			<field name="Id" type="value"></field>
+			<field name="Name" type="value"></field>	
+			<field name="AccessLevel" type="value"></field>		
+	</parser>	
+	<parser name="WorkflowProcesses" source="org.wfmc.xpdl.WorkflowProcesses" tarjet ="org.wfmc.xpdl2.WorkflowProcesses">
+			<field name="WorkflowProcess" type="list"></field>
+	</parser>	
+				
+</parsers>
